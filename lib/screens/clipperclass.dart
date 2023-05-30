@@ -30,12 +30,13 @@ class MyClipper extends CustomClipper<Path>{
    // first minus 20 from width
    path.moveTo(20, 0);
    path.lineTo(size.width-20, 0);
-   path.arcToPoint(Offset(size.width, 20));
+   path.arcToPoint(Offset(size.width, 20), radius: const Radius.circular(5), clockwise: false);
    path.lineTo(size.width, size.height-20);
-   path.arcToPoint(Offset(size.width-20,size.height));
+   path.arcToPoint(Offset(size.width-20,size.height), radius: const Radius.circular(5), clockwise: false);
    path.lineTo(20, size.height);
-   path.arcToPoint(Offset(0,size.height-20));
+   path.arcToPoint(Offset(0,size.height-20,), radius: const Radius.circular(5), clockwise: false);
     path.lineTo(0, 20);
+   path.arcToPoint( Offset(20,0,), radius: const Radius.circular(5), clockwise: false);
 
    
 
