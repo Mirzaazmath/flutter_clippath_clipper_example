@@ -21,11 +21,12 @@ class MyClipper extends CustomClipper<Path>{
 
    Path path= Path();
    path.lineTo(0, 0);
-
-   path.lineTo(0, size.height-50);
-   // path.lineTo(size.width, size.height);
-   path.cubicTo(50, size.height-200, size.width-70, size.height, size.width, size.height-10);
+   path.lineTo(0,size.height);
+   path.quadraticBezierTo(size.width/2, 0, size.width, size.height);
    path.lineTo(size.width, 0);
+
+
+
 
 
 
