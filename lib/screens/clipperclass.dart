@@ -24,29 +24,18 @@ class MyClipper extends CustomClipper<Path>{
   * */
 
   Path getClip(Size size) {
-
-   Path path= Path();
-   // here we are going opp direction
-   // first minus 20 from width
-   path.moveTo(20, 0);
-   path.lineTo(size.width-20, 0);
-   path.arcToPoint(Offset(size.width, 20), radius: const Radius.circular(5), clockwise: false);
-   path.lineTo(size.width, size.height-20);
-   path.arcToPoint(Offset(size.width-20,size.height), radius: const Radius.circular(5), clockwise: false);
-   path.lineTo(20, size.height);
-   path.arcToPoint(Offset(0,size.height-20,), radius: const Radius.circular(5), clockwise: false);
-    path.lineTo(0, 20);
-   path.arcToPoint( Offset(20,0,), radius: const Radius.circular(5), clockwise: false);
-
-   
+    Path path= Path();
+    path.moveTo(30, 0);
+    path.quadraticBezierTo(size.width/2, 50,size.width-30, 0);
+    //path.lineTo(size.width-30, 0);
+    path.arcToPoint(Offset(size.width, 50),radius: Radius.circular(35),clockwise: false);
+    path.lineTo(size.width, size.height);
+    path.lineTo(0, size.height);
+    path.lineTo(0 ,50);
+    path.arcToPoint(Offset(30, 0),radius: Radius.circular(35),clockwise: false);
 
 
 
-
-
-
-
-   path.close();
    return path;
   }
 /// this must be true
