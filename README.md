@@ -3,6 +3,8 @@
 A new Flutter project.
 
 ## Getting Started
+# Result 
+<img src="https://github.com/Mirzaazmath/flutter_clippath_clipper_example/blob/Triangle/assets/result.png" height="400">
 
 This project is a starting point for a Flutter application.
 
