@@ -6,16 +6,20 @@ class MyClipper extends CustomClipper<Path>{
   Note :
    LineTo()
    this method create a shright line from point to point
+   MoveTO()
+   this method move the point to give point
   * */
 
   Path getClip(Size size) {
 
    Path path= Path();
-// Move initial point to (0,h);
-   path.moveTo(0,size.height);
-
-   path.lineTo(size.width, size.height);
+   path.lineTo(0,0 );
+   path.lineTo(0,size.height,);
    path.lineTo(size.width, 0);
+
+
+
+
    path.close();
    return path;
   }
