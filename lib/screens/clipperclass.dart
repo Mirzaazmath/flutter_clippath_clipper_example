@@ -8,14 +8,21 @@ class MyClipper extends CustomClipper<Path>{
    this method create a shright line from point to point
    MoveTO()
    this method move the point to give point
+   quadraticBezierTo()
+   This method is used to create a quadratic bezier curve.
+
   * */
 
   Path getClip(Size size) {
 
    Path path= Path();
-   path.lineTo(0, 0);
-   path.lineTo(0, size.height);
-   path.lineTo(size.width, size.height/2);
+  path.moveTo(size.width/2, 0);
+  path.lineTo(0,size.height);
+
+  /// c= controlpoint
+   /// p = point
+  /// syntax  quadraticBezierTo(c,c,p,p);
+  path.quadraticBezierTo(size.height/2, size.width/2, size.width, size.height);
 
    path.close();
    return path;
