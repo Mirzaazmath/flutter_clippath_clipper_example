@@ -12,6 +12,7 @@ class MyClipper extends CustomClipper<Path>{
    This method is used to create a quadratic bezier curve.
    c= controlpoint
    p = point
+   first width
   syntax  quadraticBezierTo(c,c,p,p);
 
   * */
@@ -19,9 +20,10 @@ class MyClipper extends CustomClipper<Path>{
   Path getClip(Size size) {
 
    Path path= Path();
-  path.moveTo(0, size.height/2);
-  path.lineTo(size.width, size.height);
-  path.quadraticBezierTo(size.width/2, size.height/2, size.width, 0);
+   path.lineTo(0, 0);
+   path.quadraticBezierTo(size.width/2, size.height/2, 0,size.height);
+   path.lineTo(size.width, size.height/2);
+
 
    path.close();
    return path;
