@@ -6,15 +6,13 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: ClipPath(
-          clipper: MyClipper(),
+      body: ClipPath(
+        clipper: MyClipper(),
 
-          child: Container(
-            height: 300,
-            width: 300,
-            color: Colors.brown,
-          ),
+        child: Container(
+          height: 200,
+          width: double.infinity,
+          color: Colors.brown,
         ),
       ),
 
